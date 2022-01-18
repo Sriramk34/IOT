@@ -1,42 +1,13 @@
-{%load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IOT Control</title>
-    <link rel="stylesheet" href="{% static 'main/styles/index-style.css' %}">
-</head>
+{% extends 'base.html' %}
+{% block page_title %}Home{% endblock  %}
 
-
-
-<body>
-    <div class="container">
-        <header>
-            <h1>IOT Home Automation</h1>
-        </header>
-        <br>
-        <nav>
-            <a class = "navlink" href="/index/">Home</a>
-            <a class = "navlink" href="/control-panel/">Contol-Panel</a>
-            <a class = "navlink" href="#">Login</a>
-            <a class = "navlink" href="/about/">About</a>
-            <a class = "navlink" href="/contact">Contact</a>
-        </nav>
-        <br>
-
-
-        <main>
-            <div class="box">
-                <h3>Home Page</h3>
-                <p class="text-box"> This is the home page to an IOT based project. Log in to access the control panel which can be used to control the devices connected to the network. </p>
-                <br>
-
-                <a class = "source" href="https://github.com/Sriramk34/IOT">Source code</a>
-            </div>
-
-        </main>
-    </div>
-</body>
-</html>
+{% block main_body %}
+    <main>
+        <div class="box">
+            <h3>Home Page</h3>
+            <p class="text-box"> This is the home page to an IOT based project. Log in to access the control panel which can be used to control the devices connected to the network. </p>
+            <br>
+            <a class = "source" href="https://github.com/Sriramk34/IOT">Source code</a>
+        </div>
+    </main>
+{% endblock %}

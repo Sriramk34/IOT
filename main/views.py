@@ -19,3 +19,6 @@ def control(request):
     return render(request, 'main/control-panel.html',{
         'devices': devices,
     })
+
+def login(request):
+    return render(request, 'main/login.html')
