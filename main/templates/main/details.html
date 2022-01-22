@@ -1,0 +1,28 @@
+{% extends "base.html"%}
+{%load static%}
+{% block page_title %}
+{{ device.name }}
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'main/styles/details.css' %}">
+{% endblock %}
+
+{%block main_body%}
+    <div class="box1">
+        <div id='image'>
+            <img src="{% static 'main/images/Lightbulb.jpg'%}" alt="Image of a lightbulb">
+        </div>
+        <div id="col">
+            <h1 id="title">{{ device.name }}</h1>
+            <p>{{ device.description }}</p>
+        </div> 
+    </div>
+    <div class="box2">
+        <h2>STATUS</h2>
+        <img src="" alt="Graph of Weekly usage">
+    </div>
+    
+    
+    
+{% endblock %}

@@ -1,6 +1,5 @@
 l{
     list-style: none;
-    
 }
 
 .listitem{
@@ -44,6 +43,7 @@ l{
     margin-right: auto;
 }
 
+
 .statusoff h2{
     padding-top: 5px;
     text-align: center;
@@ -67,9 +67,12 @@ l{
     background-color: rgb(151, 212, 151);
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 
+.on :hover{
+    background-color: chartreuse;
+}
 
 .off{
     width: 50%;
@@ -78,4 +81,9 @@ l{
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
+}
+
+#name-link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }

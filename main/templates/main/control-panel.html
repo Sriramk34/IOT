@@ -14,13 +14,27 @@
                     <img src="" alt="Image of light bulb">
                  </div>
                  <div class="column">
-                     <h2 class ="name">{{item.name}}</h2>
+                     <h2 class ="name"><a id="name-link" href="{%url 'details' item.id%}">{{item.name}}</a></h2>
                 </div>
                 <div class="column">
                     <h2 style="text-align: center;">Status</h2>
-                    <div class={{item.color}}>
-                        <h2>{{item.status}}</h2>
-                    </div>
+                    <div 
+                        class=
+                        {% if item.status %}
+                            "statuson"
+                        {%else%}
+                            "statusoff"
+                        {% endif %}
+                    >
+                        <h2>
+                        {% if item.status %}
+                            On
+                        {%else%}
+                            Off
+                        {% endif %} 
+                            
+                        </h2>
+                    </div> 
                 </div>
                 <div class="column">
                      <div class = "on">

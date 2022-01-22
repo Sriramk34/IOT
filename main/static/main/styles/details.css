@@ -1,0 +1,45 @@
+.box1{
+    margin-left: auto;
+    margin-left: auto;
+    width: 1300px;
+    height: auto;
+    display: flex;
+}
+
+.box1 #image{
+    height: 150px;
+    width: 150px;
+    flex: 15%;
+    padding: 25px;
+}
+
+img{
+    height: 90%;
+    width: 90%;
+}
+
+.box1 #col{
+    flex: 75%;
+}
+
+#title{
+    color: honeydew;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+p{
+    color: honeydew;
+    font-size: medium;
+}
+
+h2{
+    color: honeydew;
+}
+
+.box2{
+    margin-left: auto;
+    margin-left: auto;
+    width: 1300px;
+    height: auto;
+}

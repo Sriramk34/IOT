@@ -1,4 +1,8 @@
+from functools import total_ordering
+from operator import concat
+from unicodedata import decimal
 from django.shortcuts import render
+from .models import devices
 
 def home(request):
     return render(request, 'main/Index.html')
@@ -11,14 +15,16 @@ def contact(request):
     return render(request, 'main/Contact.html')
 
 def control(request):
-    devices = [
-        {'name':'Bedroom 1', 'status':'On', 'slug':'bedroom-1', 'color':'statuson'},
-        {'name':'Bedroom 2', 'status':'Off', 'slug':'bedroom-2', 'color':'statusoff'},
-        {'name':'Bedroom 3', 'status':'On', 'slug':'bedroom-3', 'color':'statuson'}
-    ]
+    alldevices = list(devices.objects.all())
     return render(request, 'main/control-panel.html',{
-        'devices': devices,
+        'devices': alldevices,
     })
 
 def login(request):
     return render(request, 'main/login.html')
+
+def details(request, id):
+     
+    return render(request, 'main/details.html',{
+        'device': devices.objects.get(id=id)
+    })
